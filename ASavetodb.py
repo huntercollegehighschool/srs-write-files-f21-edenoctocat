@@ -4,13 +4,8 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix', '
 
 print(capitals)
 
-# 1. Declare a variable to a shelve file
-# <variable> = shelve.open(<filename string>)
+s = shelve.open('uscapitals')
 
+s['capitals'] = capitals
 
-# 2. Save the capitals dictionary to the file under the name 'capitals'
-#<filevariable>[<name>] = <value>
-
-
-# 3. Close the file.
-# <variable>.close()
+s.close()
